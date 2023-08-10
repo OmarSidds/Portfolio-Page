@@ -1,0 +1,259 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+   <nav class="navbar" id="navbar">
+     <ul class="nav-list">
+       <li>
+         <a href="#welcome-section">About</a>
+        </li>
+       <li>
+         <a href="#projects">Work</a>
+       </li>
+       <li>
+         <a href="#contact">Contact</a>
+       </li>
+     </ul>
+   </nav>
+
+   <section id="welcome-section">
+       <h1>Hey I am Omar</h1>
+       <p>a web developer</p>
+   </section>
+
+
+<section id="projects" class="project-section">
+<h2 class="project-section-header">These are some of my Projects</h2> 
+
+
+<div class="projects-grid">
+
+  <a href="https://github.com/OmarSidds/Technical-Doc-Page" class="project project-tile">
+    <img class="project-image" src="https://raw.githubusercontent.com/OmarSidds/Technical-Doc-Page/main/Tech-page.png">
+    <p class="project-title">
+<span class="code">&lt;</span>Techinical Doc Page<span class="code">/&gt;</span>
+    </p>
+  </a>
+
+<a href="https://github.com/OmarSidds/Survey-Page" class="project project-tile">
+    <img class="project-image" src="https://raw.githubusercontent.com/OmarSidds/Survey-Page/main/Survey.png">
+    <p class="project-title">
+            <span class="code">&lt;</span>
+            Survey Form
+            <span class="code">/&gt;</span>
+    </p>
+  </a>
+
+<a href="https://github.com/OmarSidds/Product-Landing-Page" class="project project-tile">
+    <img class="project-image" src="https://raw.githubusercontent.com/OmarSidds/Product-Landing-Page/main/Product1.png" >
+    <p class="project-title">
+            <span class="code">&lt;</span>
+            Product Landing Page
+            <span class="code">/&gt;</span>
+    </p>
+  </a>
+</div>
+</section>
+
+<section class="contact">
+  <div class="contact-section-header">
+  <h2>Let's Work Together...</h2>
+  <p>How do you like your coffee?</p>
+</div>
+
+<div class="contact-links">
+  <a class="btn contact-details" id="profile-link" target="_blank" href="https://github.com/OmarSidds?tab=repositories">
+  <i class="fa-brands fa-github"></i>
+  GitHub</a>
+
+  <a class="btn contact-details" href="mailto:OSOmar120@gmail.com">
+    <i class="fa-regular fa-envelope"></i>
+    Send A Email</a>
+</div>
+</section>
+
+<footer >
+  <p>All projects created by Omar Siddiqui, reach out to collaborate</p>
+</footer>
+
+
+
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@media (max-width: 480px) {
+  .text {
+    font-size: 16px;
+  }
+}
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  z-index: 10;
+}
+.nav-list{
+  display: flex;
+  margin-right: 2rem;
+}
+ul{
+  list-style: none;
+}
+.navbar a{
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+h1 {
+    font-size: 6rem;
+}
+#welcome-section > p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-red);
+}
+
+
+.project-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-blue);
+}
+.project-section-header{
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+}
+h2{
+  font-size: 4.2rem;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+img {
+    display: block;
+}
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  background: var(--main-gray);
+}
+.contact-section-header h2{
+  font-size: 6rem;
+}
+.contact-section-header p{
+  font-style: italic;
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+footer{
+  width: 100%;
+  height: 12vh;
+  background: var(--main-gray);
+  border-top: 5px solid var(--main-red);
+}
+footer p{
+  font-size: 20px;
+  margin: 2rem;
+}
+
+** end of undefined **
+
